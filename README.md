@@ -88,4 +88,29 @@
 - **DescriptorMatcher, BFMatcher, FlannBasedMatcher** : Permet de trouver des points correspondants dans deux images contenant les memes elements en comparant les vecteurs des points
 - **findHomography, warpPerspective** : permet de determiner la transformation entre deux plans
 - **CascadeClassifier** : Detecte des elements preclassifies
+
+### Machine learning (ml)
+- **CvSVM{train(),predict()}** : SVM (Support vector machine) modele d'apprentissage pour separer donnees lineaires et non lineaires
+- **CvANN_MLP{create(),train(),predict()}** : Reseau de neurones (Perceptron multi-couches), processus supervise  
+- **CvKNearest{train(),find_nearest()}** : comparaison de vecteurs (capable de classification non lineaire)
+- **CvNormalBayesClassifier{train(),predict()}** : estime vecteurs moyens et matrices de covariance
+
+### Calibration de camera
+- **calibrateCamera**
+- **solvePnP** : Estimation de la pose
+- **stereoCalibrate** : determine la transformation pour passer d'une camera a l'autre
+- **triangulatePoints** : reconstruit des points 3d avec des images stereo
+
+### Video Analysis
+- **calcOpticalFlowPyrLK, calcOpticalFlowFarneback** : calcule le mouvement de points d'interet
+- **KalmanFilter{init(), predict(),correct()}** : tracking, estimation de position d'objets
+- **calcBackProject, CamShift** : tracking base sur la couleur
+
+### Graphical user interface (highGUI)
+- Fonctions permettant de creer des interfaces graphiques
+- **VideoWriter** : Permet d'enregistrer une video
+
 ## Applications
+- Identification de logos basee sur les points d'interet
+- Identification d'images dans une base de donnees scalable
+- Realite augmentee
